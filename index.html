@@ -134,6 +134,21 @@
       margin: 0;
     }
 
+    .project-link {
+      display: inline-block;
+      margin-top: 18px;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid var(--text);
+    }
+
+    .project-link:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
     .about {
       display: grid;
       grid-template-columns: 1fr 2fr;
@@ -236,6 +251,14 @@
             Z-boson decays, using Gaussian/Cauchy models, Monte Carlo simulations,
             and a PyTorch multilayer perceptron achieving 73% classification accuracy.
           </p>
+
+          <a
+            href="cern-report.pdf"
+            target="_blank"
+            class="project-link"
+          >
+            Read the full project report ↗
+          </a>
         </article>
 
 
@@ -284,8 +307,46 @@
     </div>
   </section>
 
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap">
+      <h2 class="plain-title">Experience & leadership</h2>
 
-  <!-- EDUCATION -->
+      <div class="grid">
+
+        <article class="card">
+          <h3>Electrical Engineering Intern — Ooredoo</h3>
+
+          <div class="meta">
+            Jul–Aug 2025
+          </div>
+
+          <p>
+            Analyzed 4G/5G coverage and compared Okumura-Hata, MYRIAD, and
+            ray-tracing models. Also calculated network-site battery backup
+            requirements and inspected power-redundancy systems at a Tier 3 data center.
+          </p>
+        </article>
+
+
+        <article class="card">
+          <h3>Engineering Club</h3>
+
+          <div class="meta">
+            Co-Founder & Head · 2024–Present
+          </div>
+
+          <p>
+            Lead engineering projects and teach MATLAB through hands-on experiments,
+            including an Arduino mobile rover.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+    <!-- EDUCATION -->
   <section id="education">
     <div class="wrap">
       <h2 class="plain-title">Education</h2>
@@ -334,47 +395,6 @@
     </div>
   </section>
 
-
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="wrap">
-      <h2 class="plain-title">Experience & leadership</h2>
-
-      <div class="grid">
-
-        <article class="card">
-          <h3>Electrical Engineering Intern — Ooredoo</h3>
-
-          <div class="meta">
-            Jul–Aug 2025
-          </div>
-
-          <p>
-            Analyzed 4G/5G coverage and compared Okumura-Hata, MYRIAD, and
-            ray-tracing models. Also calculated network-site battery backup
-            requirements and inspected power-redundancy systems at a Tier 3 data center.
-          </p>
-        </article>
-
-
-        <article class="card">
-          <h3>Engineering Club</h3>
-
-          <div class="meta">
-            Co-Founder & Head · 2024–Present
-          </div>
-
-          <p>
-            Lead engineering projects and teach MATLAB through hands-on experiments,
-            including an Arduino mobile rover.
-          </p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-
   <!-- ABOUT -->
   <section id="about">
     <div class="wrap about">
@@ -384,8 +404,9 @@
       <div>
         <p>
           I'm studying engineering at the University of Michigan, with a strong
-          foundation in mathematics, physics, and chemistry. I enjoy projects where
-          theory turns into something computational or physical.
+          foundation in mathematics, physics, and chemistry. I have a particular interest 
+          in computational models and their applications in science. I know the description sounds a bit 
+          generic, but I'm a freshman so I'm trying to explore before I can decide on a concrete direction!
         </p>
 
         <div class="skills">
