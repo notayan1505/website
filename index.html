@@ -12,15 +12,12 @@
       --muted: #6b6b6b;
       --card: #ffffff;
       --line: #deded9;
+      --accent: #1d4ed8;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -76,11 +73,6 @@
       font-size: 14px;
     }
 
-    .button:hover {
-      background: var(--text);
-      color: white;
-    }
-
     .button.primary {
       background: var(--text);
       color: white;
@@ -122,6 +114,15 @@
       letter-spacing: -.02em;
     }
 
+    .card h3 a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .card h3 a:hover {
+      color: var(--accent);
+    }
+
     .meta {
       color: var(--muted);
       font-size: 13px;
@@ -131,19 +132,6 @@
     .card p {
       color: #4e4e4e;
       margin: 0;
-    }
-
-    .repo-link {
-      display: inline-block;
-      margin-top: 18px;
-      color: var(--text);
-      font-size: 13px;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .repo-link:hover {
-      text-decoration: underline;
     }
 
     .about {
@@ -170,10 +158,6 @@
       border-radius: 999px;
       background: white;
       font-size: 13px;
-    }
-
-    .education-card p {
-      line-height: 1.8;
     }
 
     footer {
@@ -203,9 +187,8 @@
 
 <main>
 
-  <!-- INTRO -->
+  <!-- HERO -->
   <header class="hero wrap">
-
     <h1>Ayan Gupta</h1>
 
     <p class="intro">
@@ -218,49 +201,31 @@
     </p>
 
     <div class="buttons">
-      <a class="button primary" href="#projects">Projects</a>
-
-      <!-- Put your resume PDF in the repository as "resume.pdf" -->
-      <a class="button" href="resume.pdf" target="_blank">
-        Resume ↗
-      </a>
-
-      <a
-        class="button"
-        href="https://github.com/notayan1505"
-        target="_blank"
-      >
-        GitHub ↗
-      </a>
-
-      <a
-        class="button"
-        href="https://www.linkedin.com/in/ayan-gupta-9258a832/"
-        target="_blank"
-      >
-        LinkedIn ↗
-      </a>
-
-      <a class="button" href="mailto:ayxn@umich.edu">
-        Email
-      </a>
+      <a class="button primary" href="#projects">View my work</a>
+      <a class="button" href="mailto:ayxn@umich.edu">Get in touch</a>
+      <a class="button" href="resume.pdf" target="_blank">Resume ↗</a>
+      <a class="button" href="https://github.com/notayan1505" target="_blank">GitHub ↗</a>
+      <a class="button" href="https://www.linkedin.com/in/ayan-gupta-9258a832/" target="_blank">LinkedIn ↗</a>
     </div>
-
   </header>
 
 
   <!-- PROJECTS -->
   <section id="projects">
-
     <div class="wrap">
-
       <h2 class="plain-title">Projects</h2>
 
       <div class="grid">
 
         <article class="card">
-
-          <h3>Computational Analysis of CERN Data</h3>
+          <h3>
+            <a
+              href="https://github.com/notayan1505/computational-analysis-of-CERN-data"
+              target="_blank"
+            >
+              Computational Analysis of CERN Data ↗
+            </a>
+          </h3>
 
           <div class="meta">
             Independent Project · 2025
@@ -271,21 +236,18 @@
             Z-boson decays, using Gaussian/Cauchy models, Monte Carlo simulations,
             and a PyTorch multilayer perceptron achieving 73% classification accuracy.
           </p>
-
-          <a
-            class="repo-link"
-            href="https://github.com/notayan1505/computational-analysis-of-CERN-data"
-            target="_blank"
-          >
-            GitHub repository ↗
-          </a>
-
         </article>
 
 
         <article class="card">
-
-          <h3>CMU Qatar Lifelines Hackathon</h3>
+          <h3>
+            <a
+              href="https://github.com/RpalZ/CBTInc.-Water-Mapper-Lifeline-Hackathon"
+              target="_blank"
+            >
+              CMU Qatar Lifelines Hackathon ↗
+            </a>
+          </h3>
 
           <div class="meta">
             Finalist · 12th / 80 · 2026
@@ -295,21 +257,18 @@
             Built a Random Forest model for 24-hour community water-demand forecasts
             and optimized delivery routes using Google OR-Tools under operational constraints.
           </p>
-
-          <a
-            class="repo-link"
-            href="https://github.com/RpalZ/CBTInc.-Water-Mapper-Lifeline-Hackathon"
-            target="_blank"
-          >
-            GitHub repository ↗
-          </a>
-
         </article>
 
 
         <article class="card">
-
-          <h3>Shell.ai Hackathon</h3>
+          <h3>
+            <a
+              href="https://github.com/notayan1505/shell.ai_hackathon"
+              target="_blank"
+            >
+              Shell.ai Hackathon ↗
+            </a>
+          </h3>
 
           <div class="meta">
             Top 15% · 2025
@@ -319,35 +278,21 @@
             Built an XGBoost model to predict fuel properties from mixture data
             across 10 target properties.
           </p>
-
-          <a
-            class="repo-link"
-            href="https://github.com/notayan1505/shell.ai_hackathon"
-            target="_blank"
-          >
-            GitHub repository ↗
-          </a>
-
         </article>
 
       </div>
-
     </div>
-
   </section>
 
 
   <!-- EDUCATION -->
   <section id="education">
-
     <div class="wrap">
-
       <h2 class="plain-title">Education</h2>
 
       <div class="grid">
 
-        <article class="card education-card">
-
+        <article class="card">
           <h3>University of Michigan</h3>
 
           <div class="meta">
@@ -357,12 +302,10 @@
           <p>
             Ann Arbor, Michigan
           </p>
-
         </article>
 
 
-        <article class="card education-card">
-
+        <article class="card">
           <h3>A-Levels</h3>
 
           <div class="meta">
@@ -370,17 +313,12 @@
           </div>
 
           <p>
-            Mathematics — A*<br>
-            Further Mathematics — A*<br>
-            Physics — A*<br>
-            Chemistry — A*
+            A* in all four subjects
           </p>
-
         </article>
 
 
-        <article class="card education-card">
-
+        <article class="card">
           <h3>SAT</h3>
 
           <div class="meta">
@@ -390,27 +328,21 @@
           <p>
             790 Math · 760 English
           </p>
-
         </article>
 
       </div>
-
     </div>
-
   </section>
 
 
   <!-- EXPERIENCE -->
   <section id="experience">
-
     <div class="wrap">
-
       <h2 class="plain-title">Experience & leadership</h2>
 
       <div class="grid">
 
         <article class="card">
-
           <h3>Electrical Engineering Intern — Ooredoo</h3>
 
           <div class="meta">
@@ -422,12 +354,10 @@
             ray-tracing models. Also calculated network-site battery backup
             requirements and inspected power-redundancy systems at a Tier 3 data center.
           </p>
-
         </article>
 
 
         <article class="card">
-
           <h3>Engineering Club</h3>
 
           <div class="meta">
@@ -438,25 +368,20 @@
             Lead engineering projects and teach MATLAB through hands-on experiments,
             including an Arduino mobile rover.
           </p>
-
         </article>
 
       </div>
-
     </div>
-
   </section>
 
 
   <!-- ABOUT -->
   <section id="about">
-
     <div class="wrap about">
 
       <h2 class="plain-title">About</h2>
 
       <div>
-
         <p>
           I'm studying engineering at the University of Michigan, with a strong
           foundation in mathematics, physics, and chemistry. I enjoy projects where
@@ -464,7 +389,6 @@
         </p>
 
         <div class="skills">
-
           <span class="tag">Python</span>
           <span class="tag">MATLAB</span>
           <span class="tag">Arduino / C++</span>
@@ -474,28 +398,22 @@
           <span class="tag">Google OR-Tools</span>
           <span class="tag">MANIM</span>
           <span class="tag">Git</span>
-
         </div>
-
       </div>
 
     </div>
-
   </section>
 
 
   <!-- CONTACT -->
   <section id="contact">
-
     <div class="wrap">
 
       <h2 class="plain-title">Contact</h2>
 
       <p style="font-size:18px; color:var(--muted); margin:0 0 15px;">
-        <a
-          href="mailto:ayxn@umich.edu"
-          style="color:inherit;"
-        >
+        Email me at
+        <a href="mailto:ayxn@umich.edu" style="color:inherit;">
           ayxn@umich.edu
         </a>
       </p>
@@ -505,18 +423,15 @@
       </p>
 
     </div>
-
   </section>
 
 </main>
 
 
 <footer>
-
   <div class="wrap">
     © 2026 Ayan Gupta
   </div>
-
 </footer>
 
 </body>
