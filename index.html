@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ayan Gupta | Engineering Student</title>
+
   <style>
     :root {
       --bg: #f7f7f5;
@@ -11,10 +12,16 @@
       --muted: #6b6b6b;
       --card: #ffffff;
       --line: #deded9;
-      --accent: #1d4ed8;
     }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -22,153 +29,442 @@
       color: var(--text);
       line-height: 1.6;
     }
-    .wrap { width: min(1000px, calc(100% - 40px)); margin: auto; }
-    nav {
-      position: sticky; top: 0; z-index: 10;
-      background: rgba(247,247,245,.9);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--line);
+
+    .wrap {
+      width: min(1000px, calc(100% - 40px));
+      margin: auto;
     }
-    nav .wrap {
-      height: 64px; display: flex; align-items: center; justify-content: space-between;
+
+    .hero {
+      padding: 110px 0 90px;
     }
-    .logo { font-weight: 700; letter-spacing: -.03em; }
-    nav a {
-      color: var(--muted); text-decoration: none; margin-left: 24px; font-size: 14px;
-    }
-    nav a:hover { color: var(--text); }
-    .hero { padding: 110px 0 90px; }
-    .eyebrow { color: var(--accent); font-weight: 700; font-size: 14px; }
+
     h1 {
       font-size: clamp(46px, 7vw, 72px);
-      line-height: .98; letter-spacing: -.06em;
-      max-width: 800px; margin: 14px 0 28px;
+      line-height: .98;
+      letter-spacing: -.06em;
+      max-width: 800px;
+      margin: 14px 0 28px;
     }
-    .hero p { max-width: 620px; color: var(--muted); font-size: 18px; }
-    .hero p.intro { color: var(--text); font-size: 17px; margin-top: -12px; }
-    .buttons { margin-top: 30px; display: flex; gap: 12px; flex-wrap: wrap; }
+
+    .hero p {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .hero p.intro {
+      color: var(--text);
+      font-size: 17px;
+      margin-top: -12px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
     .button {
-      display: inline-block; padding: 11px 17px; border: 1px solid var(--text);
-      border-radius: 999px; color: var(--text); text-decoration: none; font-size: 14px;
+      display: inline-block;
+      padding: 11px 17px;
+      border: 1px solid var(--text);
+      border-radius: 999px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
     }
-    .button.primary { background: var(--text); color: white; }
-    section { padding: 70px 0; border-top: 1px solid var(--line); }
-    .section-title { font-size: 14px; color: var(--muted); margin-bottom: 28px; }
-    .plain-title { font-size: 28px; letter-spacing: -.03em; margin: 0 0 24px; }
-    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+
+    .button:hover {
+      background: var(--text);
+      color: white;
+    }
+
+    .button.primary {
+      background: var(--text);
+      color: white;
+    }
+
+    section {
+      padding: 70px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .plain-title {
+      font-size: 28px;
+      letter-spacing: -.03em;
+      margin: 0 0 24px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
     .card {
-      background: var(--card); border: 1px solid var(--line); border-radius: 16px;
-      padding: 25px; transition: transform .2s, box-shadow .2s;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 25px;
+      transition: transform .2s, box-shadow .2s;
     }
-    .card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,.06); }
-    .card h3 { margin: 0 0 5px; font-size: 21px; letter-spacing: -.02em; }
-    .meta { color: var(--muted); font-size: 13px; margin-bottom: 15px; }
-    .card p { color: #4e4e4e; margin: 0; }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0,0,0,.06);
+    }
+
+    .card h3 {
+      margin: 0 0 5px;
+      font-size: 21px;
+      letter-spacing: -.02em;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      color: #4e4e4e;
+      margin: 0;
+    }
+
+    .repo-link {
+      display: inline-block;
+      margin-top: 18px;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .repo-link:hover {
+      text-decoration: underline;
+    }
+
     .about {
-      display: grid; grid-template-columns: 1fr 2fr; gap: 60px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 60px;
     }
-    .about p { margin-top: 0; color: #4e4e4e; font-size: 18px; }
-    .skills { display: flex; flex-wrap: wrap; gap: 9px; }
+
+    .about p {
+      margin-top: 0;
+      color: #4e4e4e;
+      font-size: 18px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
     .tag {
-      padding: 7px 11px; border: 1px solid var(--line); border-radius: 999px;
-      background: white; font-size: 13px;
+      padding: 7px 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: white;
+      font-size: 13px;
     }
-    footer { padding: 35px 0 50px; color: var(--muted); font-size: 13px; }
+
+    .education-card p {
+      line-height: 1.8;
+    }
+
+    footer {
+      padding: 35px 0 50px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
     @media (max-width: 700px) {
-      .hero { padding: 75px 0 65px; }
-      .grid, .about { grid-template-columns: 1fr; }
-      .about { gap: 10px; }
+      .hero {
+        padding: 75px 0 65px;
+      }
+
+      .grid,
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .about {
+        gap: 10px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-
 <main>
+
+  <!-- INTRO -->
   <header class="hero wrap">
+
     <h1>Ayan Gupta</h1>
+
     <p class="intro">
       University of Michigan · B.S. Engineering · Class of 2030
     </p>
+
     <p>
       I’m an engineering student interested in mathematics, physics, and building things.
       This is a collection of some of the projects I’ve worked on.
     </p>
+
     <div class="buttons">
-      <a class="button primary" href="#projects">View my work</a>
-      <a class="button" href="mailto:ayxn@umich.edu">Get in touch</a>
-      <a class="button" href="https://github.com/notayan1505" target="_blank">GitHub ↗</a>
+      <a class="button primary" href="#projects">Projects</a>
+
+      <!-- Put your resume PDF in the repository as "resume.pdf" -->
+      <a class="button" href="resume.pdf" target="_blank">
+        Resume ↗
+      </a>
+
+      <a
+        class="button"
+        href="https://github.com/notayan1505"
+        target="_blank"
+      >
+        GitHub ↗
+      </a>
+
+      <a
+        class="button"
+        href="https://www.linkedin.com/in/ayan-gupta-9258a832/"
+        target="_blank"
+      >
+        LinkedIn ↗
+      </a>
+
+      <a class="button" href="mailto:ayxn@umich.edu">
+        Email
+      </a>
     </div>
+
   </header>
 
+
+  <!-- PROJECTS -->
   <section id="projects">
+
     <div class="wrap">
+
       <h2 class="plain-title">Projects</h2>
+
       <div class="grid">
+
         <article class="card">
+
           <h3>Computational Analysis of CERN Data</h3>
-          <div class="meta">Independent Project · 2025</div>
+
+          <div class="meta">
+            Independent Project · 2025
+          </div>
+
           <p>
             Analyzed 100,000 muon events from proton-proton collisions to identify
             Z-boson decays, using Gaussian/Cauchy models, Monte Carlo simulations,
             and a PyTorch multilayer perceptron achieving 73% classification accuracy.
           </p>
+
+          <a
+            class="repo-link"
+            href="https://github.com/notayan1505/computational-analysis-of-CERN-data"
+            target="_blank"
+          >
+            GitHub repository ↗
+          </a>
+
         </article>
+
+
         <article class="card">
+
           <h3>CMU Qatar Lifelines Hackathon</h3>
-          <div class="meta">Finalist · 12th / 80 · 2026</div>
+
+          <div class="meta">
+            Finalist · 12th / 80 · 2026
+          </div>
+
           <p>
             Built a Random Forest model for 24-hour community water-demand forecasts
             and optimized delivery routes using Google OR-Tools under operational constraints.
           </p>
+
+          <a
+            class="repo-link"
+            href="https://github.com/RpalZ/CBTInc.-Water-Mapper-Lifeline-Hackathon"
+            target="_blank"
+          >
+            GitHub repository ↗
+          </a>
+
         </article>
+
+
         <article class="card">
+
           <h3>Shell.ai Hackathon</h3>
-          <div class="meta">Top 15% · 2025</div>
+
+          <div class="meta">
+            Top 15% · 2025
+          </div>
+
           <p>
             Built an XGBoost model to predict fuel properties from mixture data
             across 10 target properties.
           </p>
+
+          <a
+            class="repo-link"
+            href="https://github.com/notayan1505/shell.ai_hackathon"
+            target="_blank"
+          >
+            GitHub repository ↗
+          </a>
+
         </article>
+
       </div>
+
     </div>
+
   </section>
 
-  <section id="experience">
+
+  <!-- EDUCATION -->
+  <section id="education">
+
     <div class="wrap">
-      <h2 class="plain-title">Experience & leadership</h2>
+
+      <h2 class="plain-title">Education</h2>
+
       <div class="grid">
+
+        <article class="card education-card">
+
+          <h3>University of Michigan</h3>
+
+          <div class="meta">
+            B.S. Engineering · Class of 2030
+          </div>
+
+          <p>
+            Ann Arbor, Michigan
+          </p>
+
+        </article>
+
+
+        <article class="card education-card">
+
+          <h3>A-Levels</h3>
+
+          <div class="meta">
+            Mathematics · Further Mathematics · Physics · Chemistry
+          </div>
+
+          <p>
+            Mathematics — A*<br>
+            Further Mathematics — A*<br>
+            Physics — A*<br>
+            Chemistry — A*
+          </p>
+
+        </article>
+
+
+        <article class="card education-card">
+
+          <h3>SAT</h3>
+
+          <div class="meta">
+            1550
+          </div>
+
+          <p>
+            790 Math · 760 English
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+
+    <div class="wrap">
+
+      <h2 class="plain-title">Experience & leadership</h2>
+
+      <div class="grid">
+
         <article class="card">
+
           <h3>Electrical Engineering Intern — Ooredoo</h3>
-          <div class="meta">Jul–Aug 2025</div>
+
+          <div class="meta">
+            Jul–Aug 2025
+          </div>
+
           <p>
             Analyzed 4G/5G coverage and compared Okumura-Hata, MYRIAD, and
             ray-tracing models. Also calculated network-site battery backup
             requirements and inspected power-redundancy systems at a Tier 3 data center.
           </p>
+
         </article>
+
+
         <article class="card">
+
           <h3>Engineering Club</h3>
-          <div class="meta">Co-Founder & Head · 2024–Present</div>
+
+          <div class="meta">
+            Co-Founder & Head · 2024–Present
+          </div>
+
           <p>
             Lead engineering projects and teach MATLAB through hands-on experiments,
             including an Arduino mobile rover.
           </p>
+
         </article>
+
       </div>
+
     </div>
+
   </section>
 
+
+  <!-- ABOUT -->
   <section id="about">
+
     <div class="wrap about">
+
       <h2 class="plain-title">About</h2>
+
       <div>
+
         <p>
           I'm studying engineering at the University of Michigan, with a strong
           foundation in mathematics, physics, and chemistry. I enjoy projects where
           theory turns into something computational or physical.
         </p>
+
         <div class="skills">
+
           <span class="tag">Python</span>
           <span class="tag">MATLAB</span>
           <span class="tag">Arduino / C++</span>
@@ -178,24 +474,49 @@
           <span class="tag">Google OR-Tools</span>
           <span class="tag">MANIM</span>
           <span class="tag">Git</span>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
 
+
+  <!-- CONTACT -->
   <section id="contact">
+
     <div class="wrap">
+
       <h2 class="plain-title">Contact</h2>
+
       <p style="font-size:18px; color:var(--muted); margin:0 0 15px;">
-        Email me at <a href="mailto:ayxn@umich.edu" style="color:inherit;">ayxn@umich.edu</a>
+        <a
+          href="mailto:ayxn@umich.edu"
+          style="color:inherit;"
+        >
+          ayxn@umich.edu
+        </a>
       </p>
-      <p style="color:var(--muted);">Ann Arbor, Michigan · University of Michigan</p>
+
+      <p style="color:var(--muted);">
+        Ann Arbor, Michigan · University of Michigan
+      </p>
+
     </div>
+
   </section>
+
 </main>
 
+
 <footer>
-  <div class="wrap">© 2026 Ayan Gupta</div>
+
+  <div class="wrap">
+    © 2026 Ayan Gupta
+  </div>
+
 </footer>
 
 </body>
