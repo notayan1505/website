@@ -133,10 +133,15 @@
     }
 
 
-    /* 
-       GRID SYSTEM (shared) */
+    /* =========================
+       GRID SYSTEM (shared)
+    ========================= */
 
-
+    /*
+      Single grid system used by Projects, Experience,
+      and Education so all three behave identically:
+      3 columns on desktop, 2 on tablet, 1 on phone.
+    */
 
     .grid-3 {
       display: grid;
@@ -218,8 +223,9 @@
     }
 
 
-    /*
-       ABOUT */
+    /* =========================
+       ABOUT
+    ========================= */
 
     .about-layout {
       display: grid;
@@ -235,8 +241,27 @@
     }
 
 
-    /*
-       SKILLS */
+    /* =========================
+       SKILLS
+    ========================= */
+
+    .skill-group {
+      margin-bottom: 20px;
+    }
+
+    .skill-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .skill-group-label {
+      margin: 0 0 10px;
+
+      color: #6b6b6b;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
 
     .skills {
       display: flex;
@@ -255,8 +280,9 @@
     }
 
 
-    /* 
-       CONTACT */
+    /* =========================
+       CONTACT
+    ========================= */
 
     .contact-text {
       margin: 0 0 15px;
@@ -276,8 +302,9 @@
     }
 
 
-    /*
-       FOOTER */
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       padding: 35px 0 50px;
@@ -287,9 +314,16 @@
     }
 
 
-    /*
-       RESPONSIVE */
+    /* =========================
+       RESPONSIVE
+    ========================= */
 
+    /*
+      Three columns on desktop.
+      Two columns on tablets.
+      One column on phones.
+      Applies identically to every .grid-3 section.
+    */
 
     @media (max-width: 850px) {
 
@@ -449,7 +483,7 @@
                 target="_blank"
                 rel="noopener"
               >
-                Carnegie Mellon Qatar Lifelines Hackathon ↗
+                CMU Qatar Lifelines Hackathon ↗
               </a>
             </h3>
 
@@ -604,7 +638,7 @@
             </div>
 
             <p>
-              A* | A* | A* | A*
+              A* in all four subjects
             </p>
 
           </article>
@@ -622,6 +656,114 @@
 
             <p>
               790 Math · 760 English
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         COURSEWORK
+    ========================= -->
+
+    <section id="coursework">
+
+      <div class="container">
+
+        <h2 class="section-title">
+          Coursework
+        </h2>
+
+        <div class="grid-3">
+
+
+          <article>
+
+            <h3>
+              MATH 116
+            </h3>
+
+            <div class="item-meta">
+              Fall 2026
+            </div>
+
+            <p>
+              Calculus II
+            </p>
+
+          </article>
+
+
+          <article>
+
+            <h3>
+              MATH 215
+            </h3>
+
+            <div class="item-meta">
+              Fall 2026
+            </div>
+
+            <p>
+              Multivariate Calculus
+            </p>
+
+          </article>
+
+
+          <article>
+
+            <h3>
+              EECS 183
+            </h3>
+
+            <div class="item-meta">
+              Fall 2026
+            </div>
+
+            <p>
+              Elementary Programming Concepts
+            </p>
+
+          </article>
+
+
+          <article>
+
+            <h3>
+              CMPLXSYS 335
+            </h3>
+
+            <div class="item-meta">
+              Fall 2026
+            </div>
+
+            <p>
+              Introduction to Network Science
+            </p>
+
+          </article>
+
+
+          <article>
+
+            <h3>
+              PHIL 183
+            </h3>
+
+            <div class="item-meta">
+              Fall 2026
+            </div>
+
+            <p>
+              Critical Reasoning
             </p>
 
           </article>
@@ -664,18 +806,32 @@
             </p>
 
 
-            <div class="skills">
+            <div class="skill-group">
+              <p class="skill-group-label">Languages</p>
+              <div class="skills">
+                <span class="skill">Python</span>
+                <span class="skill">MATLAB</span>
+                <span class="skill">C++</span>
+              </div>
+            </div>
 
-              <span class="skill">Python</span>
-              <span class="skill">MATLAB</span>
-              <span class="skill">Arduino / C++</span>
-              <span class="skill">PyTorch</span>
-              <span class="skill">XGBoost</span>
-              <span class="skill">scikit-learn</span>
-              <span class="skill">Google OR-Tools</span>
-              <span class="skill">MANIM</span>
-              <span class="skill">Git</span>
+            <div class="skill-group">
+              <p class="skill-group-label">ML &amp; Data</p>
+              <div class="skills">
+                <span class="skill">PyTorch</span>
+                <span class="skill">XGBoost</span>
+                <span class="skill">scikit-learn</span>
+              </div>
+            </div>
 
+            <div class="skill-group">
+              <p class="skill-group-label">Tools</p>
+              <div class="skills">
+                <span class="skill">Arduino</span>
+                <span class="skill">Google OR-Tools</span>
+                <span class="skill">MANIM</span>
+                <span class="skill">Git</span>
+              </div>
             </div>
 
           </div>
